@@ -1,10 +1,5 @@
 import java.awt.Color;
 import java.awt.Graphics;
-import java.awt.event.KeyEvent;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
@@ -22,18 +17,11 @@ public class View extends JFrame {
                     {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 3}
             };
 
-    private final List<Integer> path = new ArrayList<Integer>();
-    private int pindex;
-
     public View() {
         setTitle("Simple Maze Solver");
         setSize(600, 500);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-//		Dfs.searchPath(maze, 1, 1, path);
-//		pindex=path.size()-2;
-//		System.out.println(path);
     }
 
     @Override
@@ -71,40 +59,8 @@ public class View extends JFrame {
             }
             System.out.println();
         }
-//		for(int p=0;p<path.size();p+=2) {
-//			int px=path.get(p);
-//			int py=path.get(p+1);
-//			g.setColor(Color.GREEN);
-//			g.fillRect(px*30,py*30,30,30);
-//		}
-
-//		int px=path.get(pindex);
-//		int py=path.get(pindex+1);
-//		g.setColor(Color.RED);
-//		g.fillOval(px*30,py*30,30,30);
-//		
     }
 
-
-//		@Override
-//		protected void processKeyEvent(KeyEvent ke) {
-//	        if (ke.getID() != KeyEvent.KEY_PRESSED) {
-//	            return;
-//	        }
-//	        if (ke.getKeyCode() == KeyEvent.VK_RIGHT) {
-//	            pindex -= 2;
-//	            if (pindex < 0) {
-//	                pindex = 0;
-//	            }
-//	        }
-//	        else if (ke.getKeyCode() == KeyEvent.VK_LEFT) {
-//	            pindex += 2;
-//	            if (pindex > path.size() - 2) {
-//	            	pindex = path.size() - 2;
-//	            }
-//	        }
-//	        repaint(); 
-//	    }
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
