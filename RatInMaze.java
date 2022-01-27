@@ -13,7 +13,6 @@ public class RatInMaze {
 
 
     public static boolean solveMaze(int[][] v, int i, int j, int m, int n) {
-        int c = 1;
         //in question
         //1 - wall
         //0 - empty space
